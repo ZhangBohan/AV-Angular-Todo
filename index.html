@@ -20,6 +20,7 @@
 					<div class="controls form-inline">
 						<input id="todo{{$index}}" type="checkbox" ng-change="updateTodoState(todo)" ng-model="todo.done"/>
 						<label for="todo{{$index}}">{{todo.text}}</label>
+						<img ng-src="{{todo.image_url}}">
 					</div>
 				</li>
 			</ul>
@@ -30,6 +31,7 @@
 			<form ng-submit="addTodo()">
 				<div class="input-append">
 					<input type="text" ng-model="newTodo.text">
+					<input type="file" ng-model="newTodo.file" id="todoFile">
 					<input class="btn btn-primary" type="submit" value="add">
 				</div>
 			</form>
@@ -43,6 +45,7 @@
 					<div class="controls form-inline">
 						<input id="done{{$index}}" type="checkbox" ng-change="updateTodoState(todo)" ng-model="todo.done"/>
 						<label for="done{{$index}}">{{todo.text}}</label>
+						<img ng-src="{{todo.image_url}}">
 					</div>
 				</li>
 			</ul>
